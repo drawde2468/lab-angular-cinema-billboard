@@ -1,0 +1,34 @@
+<h2>
+  Room {{selectedMovie.room}}</h2>
+<h1>{{selectedMovie.title}}</h1>
+
+<div id="movie-container">
+  <div id="img-box">
+    <img src="{{selectedMovie.poster}}">
+  </div>
+  <div id="details-box">
+    <table>
+      <tr>
+        <th>Genres:</th>
+        <td><span *ngFor="let genre of selectedMovie.genres">{{genre}}<br></span></td>
+      </tr>
+      <tr>
+        <th>Year:</th>
+        <td>{{selectedMovie.year}}</td>
+      </tr>
+      <tr>
+        <th>Director:</th>
+        <td>{{selectedMovie.director}}</td>
+      </tr>
+      <tr>
+        <th>Actors:</th>
+        <td><span *ngFor="let actor of selectedMovie.actors">{{actor}}<br></span></td>
+      </tr>
+      <tr>
+        <th>Schedule:</th>
+        <td><span *ngFor="let time of selectedMovie.hours">{{time}}<br></span></td>
+      </tr>
+    </table>
+    <p>{{selectedMovie.synopsis}}</p>
+  </div>
+</div>
